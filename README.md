@@ -28,6 +28,9 @@ charge. All of the others offer free trials for evaluation. With this book, and 
 exposure to data analysis (or basic programming concepts) the reader will be able to gain
 valuable insights to the world of big data visualization!
 
+## Note:
+Chapter 01, 04, 06, 08 do not contain code
+
 ##Related Products
 * [Data Visualization: a successful design process](https://www.packtpub.com/big-data-and-business-intelligence/data-visualization-successful-design-process?utm_source=github&utm_medium=repository&utm_campaign=9781849693462)
 
