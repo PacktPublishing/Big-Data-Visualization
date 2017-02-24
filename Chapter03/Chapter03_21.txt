@@ -1,0 +1,10 @@
+# --- use subset function and the “OR” operator to only have 
+# --- northeast region states in our list
+NERVisits<-subset(tmpRTable, as.character(V9)=="Connecticut" | as.character(V9)=="Maine"
+| as.character(V9)=="Massachusetts"
+| as.character(V9)=="New Hampshire"
+| as.character(V9)=="New York"
+| as.character(V9)=="New Jersey"
+| as.character(V9)=="Pennsylvania"
+| as.character(V9)=="Rhode Island"
+| as.character(V9)=="Vermont")

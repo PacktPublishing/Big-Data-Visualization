@@ -1,0 +1,10 @@
+# --- create a data frame from our original table file
+datas.df <- data.frame(tmpRTable)
+
+# --- create a filtered data frame of records from the file
+# --- using the record year and state fields from the file
+dats.df<-data.frame(substr(substr(datas.df[,2],(regexpr('/',datas.df[,2])+1),11),( regexpr('/',substr(datas.df[,2],(regexpr('/',datas.df[,2])+1),11))+1),11),datas.df[,9])
+
+# --- plot to show a visualization
+plot(sort(table(dats.df[2]),decreasing = TRUE),type="o", col="blue")
+title(main = list("Hospital Visits by State (Highest to Lowest)", font = 2))

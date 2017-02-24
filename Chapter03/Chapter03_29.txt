@@ -1,0 +1,20 @@
+# --- group the data into age groups
+agegroup1<-subset(tmpRTable, as.numeric(V4)<22)
+agegroup2<-subset(tmpRTable, as.numeric(V4)>21 & as.numeric(V4)<35)
+agegroup3<-subset(tmpRTable, as.numeric(V4)>34 & as.numeric(V4)<45)
+agegroup4<-subset(tmpRTable, as.numeric(V4)>44 & as.numeric(V4)<55)
+agegroup5<-subset(tmpRTable, as.numeric(V4)>54 & as.numeric(V4)<66)
+agegroup6<-subset(tmpRTable, as.numeric(V4)>64)
+
+# --- calculate the averages by group
+g1<-mean(as.numeric(agegroup1[,96]))
+g2<-mean(as.numeric(agegroup2[,96]))
+g3<-mean(as.numeric(agegroup3[,96]))
+g4<-mean(as.numeric(agegroup4[,96]))
+g5<-mean(as.numeric(agegroup5[,96]))
+g6<-mean(as.numeric(agegroup6[,96]))
+
+# --- create the visualization
+barplot(c(g1,g2,g3,g4,g5,g6),
++ axisnames=TRUE, names.arg = c("<21", "22-34", "35-44", "45-54", "55-64", ">65"))
+> title("Glasses of Water by Age Group")

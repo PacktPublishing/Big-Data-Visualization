@@ -1,0 +1,3 @@
+# --- create a table holding record year and total count for 
+# --- smokers and not smoking
+c<-table(datas.df[,2],datas.df[,16])

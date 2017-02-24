@@ -1,0 +1,5 @@
+complete.dat <- rbind(C:/Big Data Visualization/weblog1.txt,C:/Big Data Visualization/weblog2.txt)
+datafile1 <- read.csv("C:/Big Data Visualization/weblog1.txt", header=T, sep=",")
+datafile2 <- read.csv("C:/Big Data Visualization/weblog2.txt", header=T, sep=",")
+datafile <- rbind(datafile1, datafile2)
+write.csv(datafile,"C:/Big Data Visualization/oneWebLog.txt")

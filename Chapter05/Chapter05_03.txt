@@ -1,0 +1,27 @@
+# --- reads the raw file into a R table named “parts”
+parts<-read.table(file="C:/Big Data Visualization/Chapter 5/samplePlanData.txt",sep=",")
+data.df <- data.frame(parts)
+
+# --- create a subset of the raw data for each shift id
+FirstShift<-subset(data.df,data.df[,2]=="First")
+SecondShift<-subset(data.df,data.df[,2]=="Second")
+ThirdShift<-subset(data.df,data.df[,2]=="Third")
+
+# --- aggregate part totals by shift ID
+sum(as.numeric(FirstShift[,4]))
+sum(as.numeric(SecondShift[,4]))
+sum(as.numeric(ThirdShift[,4]))
+
+# --- create a summary file for visualization
+sink("C:/Big Data Visualization/Chapter 5/data.tsv")
+cat("shiftid")
+cat("\t")
+cat("partcount")
+cat("\n")
+cat(paste("First Shift", "\t", sum(as.numeric(FirstShift[,4]))),sep = "\t", collapse = NULL)
+cat("\n")
+cat(paste("Second Shift", "\t", sum(as.numeric(SecondShift[,4]))),sep = "\t", collapse = NULL)
+cat("\n")
+cat(paste("Third Shift", "\t", sum(as.numeric(ThirdShift[,4]))),sep = "\t", collapse = NULL)
+cat("\n")
+sink()

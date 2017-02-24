@@ -1,0 +1,9 @@
+tmpRTable<-read.table("C:/Big Data Visualization/oneWebLog.txt") 
+tmpRTable<-tmpRTable,c(4,9)]
+data.df <- data.frame(tmpRTable)
+adata.df <- data.frame(nrow(data.df))
+for(i in 1: nrow(data.df))
+{
+adata.df[i,1]<- paste(substr(data.df[i,1],start=5,stop=7), ", ", data.df[i,2])
+}
+write.table(adata.df, file = "C:/Big Data Visualization/WebsitesByMonth.txt", sep = ",", quote = FALSE, col.names = FALSE, row.names = FALSE) 

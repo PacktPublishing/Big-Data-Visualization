@@ -1,0 +1,30 @@
+# --- simply add up the coin-in for penny slots
+# --- skipping any coin-in total over 1999
+
+import csv
+
+with open('SlotsResults.csv') as csvfile:
+     reader = csv.DictReader(csvfile)
+
+   # --- initialize variables for the number of rows and
+   # --- average coin-in amount and “x” is the running total
+   # --- of coin-in
+
+     row_count = 0
+     aver_coin_in = 0.0
+     x = 0.0
+
+     for row in reader:
+         if (row['Denomination']) == 'Penny':
+            if int(row['Coin-in'])<2000:
+                x += int(row['Coin-in'])
+            row_count += 1
+     
+# --- compute the average coin-in by dividing the accumulated 
+# --- total of penny slit machine coin-ins by the number of penny # --- slot machines
+
+     aver_coin_in = x/row_count
+
+# --- just print the calculated average coin-in
+
+     print(aver_coin_in)

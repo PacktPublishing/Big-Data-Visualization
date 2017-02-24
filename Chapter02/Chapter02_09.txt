@@ -1,0 +1,2 @@
+insert overwrite table dabigdatatable 
+select substr (substr (logrecord, instr(logrecord,'['), 12),5,3), substr(logrecord, instr(logrecord,'www'), 250) from thebigdatatable;

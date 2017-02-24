@@ -1,0 +1,3 @@
+# --- use R barplot to create the bar graph of 
+# --- average patient weight
+barplot(c, ylim=c(0,200),  ylab="Patient Weight", border="Black", names.arg = c("under care","not under care", "all"), legend.text= c(format(c[1],digits=5),format(c[2],digits=5),format(c[3],digits=5)))> title("Average Patient Weight")

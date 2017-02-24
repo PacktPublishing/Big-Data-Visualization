@@ -1,0 +1,2 @@
+PDQ<-paste(format((as.numeric(as.character(tmpRTable[,5]))/(as.numeric(as.character(tmpRTable[,6]))^2)*703),digits=2),',',tmpRTable[,9],sep="")
+write.csv(PDQ,file="C:/Big Data Visualization/Chapter 3/BMI.txt", quote = FALSE,row.names = FALSE)

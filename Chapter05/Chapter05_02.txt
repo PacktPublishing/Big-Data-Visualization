@@ -1,0 +1,2 @@
+<!--- here is the data -->
+d3.csv("data.csv", function(error, data) {

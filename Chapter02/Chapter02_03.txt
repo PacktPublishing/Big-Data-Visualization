@@ -1,0 +1,18 @@
+tmpTableSpace<-read.table("C:/Big Data Visualization/ WebsitesByMonth.txt ")
+data.df <- data.frame(tmpTableSpace)
+M01 <-0; M02 <-0; M03 <-0; M04 <-0; M05 <-0; M06 <-0
+M07 <-0; M08 <-0; M09 <-0; M10 <-0; M11 <-0; M12 <-0
+for(i in 1:nrow(data.df))
+{
+if (substr(data.df[i,1],start=1,stop=3) == 'Jan') {M01 <- M01 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Feb') {M02 <- M02 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Mar') {M03 <- M03 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Apr') {M04 <- M04 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'May') {M05 <- M05 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Jun') {M06 <- M06 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Jul') {M07 <- M07 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Aug') {M08 <- M08 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Sep') {M09 <- M09 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Oct') {M10 <- M10 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Nov') {M11 <- M11 + 1}
+if (substr(data.df[i,1],start=1,stop=3) == 'Dec') {M12 <- M12 + 1}

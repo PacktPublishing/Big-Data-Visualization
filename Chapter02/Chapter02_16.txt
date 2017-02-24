@@ -1,0 +1,2 @@
+select substr(substr(logrecord, instr(logrecord,'['), 12),5,3), count(substr(logrecord, 1, (instr(logrecord,'-')-2))) 
+from thebigdatatable group by substr(substr(logrecord, instr(logrecord,'['), 12),5,3);

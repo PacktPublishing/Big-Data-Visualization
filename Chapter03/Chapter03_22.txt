@@ -1,0 +1,2 @@
+AvgNERVisits<-nrow(NERVisits)/9
+averageVisits<-nrow(tmpRTable)/50

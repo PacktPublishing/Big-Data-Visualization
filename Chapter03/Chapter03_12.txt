@@ -1,0 +1,5 @@
+# --- create Pie Chart
+
+slices <- c(a1, a2, a3, a4, a5, a6)
+lbls <- c("under 21", "22-34","35-44","45-54","55-64", "65 & over")
+pie(slices, labels = lbls, main="Hospital Visits by Age Range")

@@ -1,0 +1,1 @@
+select mydate, count(distinct(mysite)) from dabigdatatable group by mydate

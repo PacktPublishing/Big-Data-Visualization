@@ -1,0 +1,3 @@
+
+# --- calculate the average 
+averageVisits<-nrow(datas.df)/50

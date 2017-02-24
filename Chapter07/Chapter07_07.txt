@@ -1,0 +1,34 @@
+# --- let us create a sample population based upon
+# --- Denomination, Theme and Promotion
+
+import csv
+with open('SlotsResults_larger_new.csv', 'w') as csvfile_o:
+     fieldnames = ['Location','Denomination','Month','Weekday','Type','Theme','Age','Promotion','Coupons','Weather','Coin-in']
+
+     with open('SlotsResults_larger.csv') as csvfile:
+
+          reader = csv.DictReader(csvfile)
+          writer = csv.DictWriter(csvfile_o, fieldnames=fieldnames)
+
+          writer.writeheader()
+
+          for row in reader:
+
+# --- use if with or & and conditions and notice line concat
+
+              if ((row['Denomination']=='Dime') or (row['Denomination']=='Nickel') or \
+                 (row['Denomination']=='Penny') or (row['Denomination']=='Quarter') or \
+                 (row['Denomination']=='Two Cent')) and (row['Theme']=='Horror') and (row['Promotion']=='None'): 
+               
+                 writer.writerow({'Location': row['Location'],
+                             'Denomination’: row['Denomination'],
+                             'Month': row['Month'],
+                             'Weekday': row['Weekday'],
+			       				  'Type': row['Type'],
+                             'Theme': row['Theme'],
+                             'Age': row['Age'],
+                             'Promotion': row['Promotion'],
+                             'Coupons': row['Coupons'],
+                             'Weather': row['Weather'],
+                             'Coin-in': row['Coin-in']
+                             })

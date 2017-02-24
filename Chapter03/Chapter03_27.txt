@@ -1,0 +1,4 @@
+# --- field 96 in the file is the number of servings of water
+# --- below line counts the total number of water servings for 
+# --- age group 1
+sum(as.numeric(agegroup1[,96]))

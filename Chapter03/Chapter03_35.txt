@@ -1,0 +1,9 @@
+plot(Monthly_Visits, ylim=c(1000,4000))
+lines(Group1Visits, type="b", col="red")
+lines(Group2Visits, type="b", col="purple")
+lines(Group3Visits, type="b", col="green")
+lines(Group4Visits, type="b", col="yellow")
+lines(Group5Visits, type="b", col="pink")
+lines(Group6Visits, type="b", col="blue")
+title("Hosptial Visits", sub = "Month to Month",
+      cex.main = 2,   font.main= 4, col.main= "blue",     cex.sub = 0.75, font.sub = 3, col.sub = "red")

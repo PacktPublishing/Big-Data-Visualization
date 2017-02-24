@@ -1,0 +1,4 @@
+# --- set up the values to chart and the labels for each bar
+# --- in the chart
+bars<-c(c[2,3], c[3,3], c[4,3],c[5,3],c[6,3],c[7,3],c[8,3],c[9,3],c[10,3],c[11,3],c[12,3],c[13,3])
+lbls<-c("99","00","01","02","03","04","05","06","07","08","09","10")

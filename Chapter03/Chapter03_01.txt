@@ -1,0 +1,11 @@
+# --- read our file into a temporary R table
+tmpRTable4TimeBox<-read.table(file="C:/Big Data Visualization/Chapter 3/sampleHCSurvey02.txt”, sep=",") 
+
+# --- convert to an R data frame and filter it to just include # --- the 2nd column or field of data
+data.df <- data.frame(tmpRTable4TimeBox)
+data.df <- data.df[,2]
+
+# --- provides a sorted list of the years in the file
+YearsInData = substr(substr(data.df[],(regexpr('/',data.df[])+1),11),( regexpr('/',substr(data.df[],(regexpr('/',data.df[])+1),11))+1),11)
+# -- write a new file named ListofYears
+write.csv(sort(unique(YearsInData)),file="C:/Big Data Visualization /Chapter 3/ListofYears.txt",quote = FALSE, row.names = FALSE)

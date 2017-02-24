@@ -1,0 +1,1 @@
+table(datas.df[,3],datas.df[,16])

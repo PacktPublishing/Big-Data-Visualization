@@ -1,0 +1,29 @@
+# --- writing a new CSV file dropping any video poker records 
+
+import csv
+with open('SlotsResults.csv', 'w') as csvfile_o:
+     fieldnames = ['Location','Denomination','Month','Weekday','Type','Theme','Age','Promotion','Coupons','Weather','Coin-in']
+
+     with open('SlotsResults_slotonly.csv') as csvfile:
+
+          reader = csv.DictReader(csvfile)
+          writer = csv.DictWriter(csvfile_o, fieldnames=fieldnames)
+
+          writer.writeheader()
+          for row in reader:
+
+# --- use the Type field to identify records to drop
+
+              if row['Type']!='Video Poker':                
+                 writer.writerow({'Location': row['Location'],
+                             'Denomination’: row['Denomination'],
+                             'Month': row['Month'],
+                             'Weekday': row['Weekday'],
+			       				  'Type': row['Type'],
+                             'Theme': row['Theme'],
+                             'Age': row['Age'],
+                             'Promotion': row['Promotion'],
+                             'Coupons': row['Coupons'],
+                             'Weather': row['Weather'],
+                             'Coin-in': row['Coin-in']
+                             })

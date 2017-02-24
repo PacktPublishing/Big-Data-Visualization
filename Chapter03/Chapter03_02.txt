@@ -1,0 +1,16 @@
+# --- assuming tmpRTable holds the data already
+datas.df<-data.frame(tmpRTable)
+
+# --- initialize 2 counter variables
+NumberMaleVisits <-0;NumberFemaleVisits <-0
+
+# --- read through the data
+for(i in 1:nrow(datas.df))
+{
+if (datas.df[i,3] == 'Male') {NumberMaleVisits <- NumberMaleVisits + 1}
+if (datas.df[i,3] == 'Female') {NumberFemaleVisits <- NumberFemaleVisits + 1}
+}
+
+# --- show me the totals
+NumberMaleVisits
+NumberFemaleVisits

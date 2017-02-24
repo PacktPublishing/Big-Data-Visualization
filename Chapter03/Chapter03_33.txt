@@ -1,0 +1,2 @@
+Janag1<-az1["Jan"];Febag1<-az1["Feb"];Marag1<-az1["Mar"];Aprag1<-az1["Apr"];Mayag1<-az1["May"];Junag1<-az1["Jun"]
+Julag1<-az1["Jul"];Augag1<-az1["Aug"];Sepag1<-az1["Sep"];Octag1<-az1["Oct"];Novag1<-az1["Nov"];Decag1<-az1["Dec"]

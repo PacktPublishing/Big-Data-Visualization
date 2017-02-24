@@ -1,0 +1,7 @@
+# --- build subsets of each age group
+agegroup1<-subset(tmpRTable, as.numeric(V4)<22)
+agegroup2<-subset(tmpRTable, as.numeric(V4)>21 & as.numeric(V4)<35)
+agegroup3<-subset(tmpRTable, as.numeric(V4)>34 & as.numeric(V4)<45)
+agegroup4<-subset(tmpRTable, as.numeric(V4)>44 & as.numeric(V4)<55)
+agegroup5<-subset(tmpRTable, as.numeric(V4)>54 & as.numeric(V4)<66)
+agegroup6<-subset(tmpRTable, as.numeric(V4)>64)

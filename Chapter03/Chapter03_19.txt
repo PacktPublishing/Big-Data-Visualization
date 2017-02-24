@@ -1,0 +1,6 @@
+# --- calculates the number of hospital visits for each 
+# --- state (state ID is in field 9 of the file
+StateVisitCount<-table(datas.df[9])
+
+# --- write out a csv file of counts by state
+write.csv (StateVisitCount, file="C:/Big Data Visualization/Chapter 3/visitsByStateName.txt", quote = FALSE, row.names = FALSE)

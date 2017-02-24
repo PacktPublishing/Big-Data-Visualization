@@ -1,0 +1,2 @@
+slices <- c(M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M11, M12)lbls <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+pie(slices, labels = lbls, main="Pie Chart of Month Hit Counts")

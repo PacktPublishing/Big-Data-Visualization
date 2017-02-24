@@ -1,0 +1,11 @@
+j=1
+for(i in 2:nrow(tmpRTable))
+{
+W<-as.numeric(as.character(tmpRTable[i,5]))
+H<-as.numeric(as.character(tmpRTable[i,6]))
+P<-(W/(H^2)*703)
+datas2.df[j,1]<-format(P,digits=3)
+datas2.df[j,2]<-tmpRTable[i,9]
+j=j+1
+}
+write.csv(datas2.df[1:j-1,1:2],file="C:/Big Data Visualization/Chapter 3/BMI.txt", quote = FALSE, row.names = FALSE)

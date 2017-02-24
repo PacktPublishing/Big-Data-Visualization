@@ -1,0 +1,3 @@
+counts <- c(74878,92368,88219,90984,83731,91826,86173,102551,80837,85283,84281,87445)
+barplot(counts, main="IP Counts By Month",
+   xlab="Number of Distinct IPs")

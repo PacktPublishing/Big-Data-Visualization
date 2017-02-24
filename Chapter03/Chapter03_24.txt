@@ -1,0 +1,11 @@
+# --- read in our entire file
+tmpRTable<-read.table(file="C:/Big Data Visualization/Chapter 3/sampleHCSurvey02.txt",sep=",") 
+# --- use the subset functionto create the 2 groups we are
+# --- interested in
+UCare.sub<-subset(tmpRTable, V20=="Yes")
+NUCare.sub<-subset(tmpRTable, V20=="No")
+# --- use the mean function to get the average body weight of all pateints in the file as well as for each of our separate groups
+average_undercare<-mean(as.numeric(as.character(UCare.sub[,5])))
+average_notundercare<-mean(as.numeric(as.character(NUCare.sub[,5])))
+averageoverall<-mean(as.numeric(as.character(tmpRTable[2:nrow(tmpRTable),5])))
+average_undercare;average_notundercare;averageoverall

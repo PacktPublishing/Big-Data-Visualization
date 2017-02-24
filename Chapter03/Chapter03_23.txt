@@ -1,0 +1,9 @@
+# -- the c objet is the the data for the barplot function to 
+# --- graph
+c<-c(AvgNERVisits, averageVisits)
+
+# --- use R barplot
+barplot(c, ylim=c(0,3000),  
+ylab="Average Visits", border="Black", 
+names.arg = c("Northeast","all")) 
+title("Northeast Region vs Country")

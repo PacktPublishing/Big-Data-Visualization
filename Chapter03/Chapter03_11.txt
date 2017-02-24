@@ -1,0 +1,13 @@
+# --- initialize age range counters
+a1 <-0;a2 <-0;a3 <-0;a4 <-0;a5 <-0;a6 <-0
+
+# --- read and count visits by age range
+for(i in 2:nrow(datas.df))
+{
+if (as.numeric(datas.df[i,4]) < 22) {a1 <- a1 + 1}
+if (as.numeric(datas.df[i,4]) > 21 & as.numeric(datas.df[i,4]) < 35) {a2 <- a2 + 1}
+if (as.numeric(datas.df[i,4]) > 34 & as.numeric(datas.df[i,4]) < 45) {a3 <- a3 + 1}
+if (as.numeric(datas.df[i,4]) > 44 & as.numeric(datas.df[i,4]) < 55) {a4 <- a4 + 1}
+if (as.numeric(datas.df[i,4]) > 54 & as.numeric(datas.df[i,4]) < 65) {a5 <- a5 + 1}
+if (as.numeric(datas.df[i,4]) > 64) {a6 <- a6 + 1}
+}

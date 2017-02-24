@@ -1,0 +1,30 @@
+# --- creating a new csv file with outlier values set to 930
+
+import csv
+with open('SlotsResults_new.csv', 'w') as csvfile_o:
+     fieldnames = ['Location','Denomination','Month','Weekday','Type','Theme','Age','Promotion','Coupons','Weather','Coin-in']
+
+     with open('SlotsResults_larger.csv') as csvfile:
+          reader = csv.DictReader(csvfile)
+          writer = csv.DictWriter(csvfile_o, fieldnames=fieldnames)
+
+          writer.writeheader()
+
+          for row in reader:
+              if row['Coin-in']>'2000':
+                 x = '930'
+              else:
+                 x = row['Coin-in']
+
+              writer.writerow({'Location': row['Location'],
+                             'Denomination': row['Denomination'],
+                             'Month': row['Month'],
+                             'Weekday': row['Weekday'],
+			                    'Type': row['Type'],
+                             'Theme': row['Theme'],
+                             'Age': row['Age'],
+                             'Promotion': row['Promotion'],
+                             'Coupons': row['Coupons'],
+                             'Weather': row['Weather'],
+                             'Coin-in': x
+                             })

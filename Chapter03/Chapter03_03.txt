@@ -1,0 +1,4 @@
+# --- using R table function as "group by" field number
+# --- patient sex is the 3rd field in the file
+
+table(datas.df[,3])

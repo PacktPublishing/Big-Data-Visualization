@@ -1,0 +1,1 @@
+JanAvg<-mean(az1["Jan"], az2["Jan"], az3["Jan"], az4["Jan"], az5["Jan"], az6["Jan"])

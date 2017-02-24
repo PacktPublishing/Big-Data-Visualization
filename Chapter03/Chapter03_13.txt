@@ -1,0 +1,3 @@
+# --- redefine the record date field to hold just the record 
+# --- year value
+datas.df[,2]<-substr(substr(datas.df[,2],(regexpr('/',datas.df[,2])+1),11),( regexpr('/',substr(datas.df[,2],(regexpr('/',datas.df[,2])+1),11))+1),11)

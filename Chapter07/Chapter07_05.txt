@@ -1,0 +1,34 @@
+# --- creating a new csv file from our original gaming file
+# --- with age set to 20 if > than 20
+
+import csv
+with open('SlotsResults_fixedAge.csv', 'w') as csvfile_o:
+     fieldnames = ['Location','Denomination','Month','Weekday','Type','Theme','Age','Promotion','Coupons','Weather','Coin-in']
+
+     with open('SlotsResults_larger.csv') as csvfile:
+          reader = csv.DictReader(csvfile)
+          writer = csv.DictWriter(csvfile_o, fieldnames=fieldnames)
+          writer.writeheader()
+          for row in reader:
+
+        # --- if the age is greater than 20 make it 20
+        # --- the variable x is used to reset the correct
+        # --- age value
+
+              if row['Age']>'20':
+                 x = '20'
+              else:
+                 x = row['Age']
+
+              writer.writerow({'Location': row['Location'],
+                             'Denomination': row['Denomination'],
+                             'Month': row['Month'],
+                             'Weekday': row['Weekday'],
+			       				  'Type': row['Type'],
+                             'Theme': row['Theme'],
+                             'Age': x,
+                             'Promotion': row['Promotion'],
+                             'Coupons': row['Coupons'],
+                             'Weather': row['Weather'],
+                             'Coin-in': row['Coin-in']
+                             })

@@ -1,0 +1,3 @@
+st<-ftable(datas.df[,9])
+barplot(st)
+title(main = list("Hospital Visits by State", font = 2))

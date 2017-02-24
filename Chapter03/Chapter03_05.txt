@@ -1,0 +1,1 @@
+Sort(table(datas.df[,4]))

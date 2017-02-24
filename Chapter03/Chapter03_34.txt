@@ -1,0 +1,3 @@
+Monthly_Visits<-c(JanAvg, FebAvg, MarAvg, AprAvg, MayAvg, JunAvg, JulAvg, AugAvg, SepAvg, OctAvg, NovAvg, DecAvg)
+Group1Visits<-c(Janag1,Febag1,Marag1,Aprag1,Mayag1,Junag1,Julag1,Augag1,Sepag1,Octag1,Novag1,Decag1)
+Group2Visits<-c(Janag2,Febag2,Marag2,Aprag2,Mayag2,Junag2,Julag2,Augag2,Sepag2,Octag2,Novag2,Decag2)

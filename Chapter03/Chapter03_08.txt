@@ -1,0 +1,11 @@
+# -- use ftable function to drop out the header record
+forChart<- ftable(datas.df[,3])
+ 
+# --- create bar names
+barnames<-c("Female","Male")
+ 
+# -- use barplot to draw bar visual
+barplot(forChart[2:3], col = "brown1", border = TRUE, names.arg = barnames)
+
+# --- add a title
+title(main = list("Hospital Visits by Sex", font = 4))
